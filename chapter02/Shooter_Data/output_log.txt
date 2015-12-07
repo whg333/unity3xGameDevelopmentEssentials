@@ -1,0 +1,26 @@
+Initialize engine version: 5.0.0f4 (5b98b70ebeb9)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GT 430 (ID=0xde1)
+    Vendor:   NVIDIA
+    VRAM:     1998 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: D:\whg\unity3d\Test\Test\Shooter_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading D:\whg\unity3d\Test\Test\Shooter_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: D:\whg\unity3d\Test\Test\Shooter_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading D:\whg\unity3d\Test\Test\Shooter_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: D:\whg\unity3d\Test\Test\Shooter_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
+Loading D:\whg\unity3d\Test\Test\Shooter_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
+Platform assembly: D:\whg\unity3d\Test\Test\Shooter_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading D:\whg\unity3d\Test\Test\Shooter_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: D:\whg\unity3d\Test\Test\Shooter_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading D:\whg\unity3d\Test\Test\Shooter_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+- Completed reload, in  0.107 seconds
+desktop: 1440x900 75Hz; virtual: 2880x900 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+Platform assembly: D:\whg\unity3d\Test\Test\Shooter_Data\Managed\System.Core.dll (this message is harmless)
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: d280 -> priority: 1 
