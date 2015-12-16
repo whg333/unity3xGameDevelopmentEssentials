@@ -32,5 +32,11 @@ public class Shooter : MonoBehaviour {
 			//使用Rigidbody.AddForce为刚体添加作用力，力的方向由其参数Vector3指定，此处即代表正前方*power的力
 			instance.AddForce(fwd * power);
 		}
+
+		//当玩家按下Esc键后退出
+		if(Input.GetKeyDown(KeyCode.Escape)){
+			UnityEditor.EditorApplication.isPlaying = false; //编辑器模式下退出
+			Application.Quit(); //游戏模式下退出
+		}
 	}
 }
