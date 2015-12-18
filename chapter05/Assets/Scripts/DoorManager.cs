@@ -31,7 +31,7 @@ public class DoorManager : MonoBehaviour {
 		}
 	}
 
-	void checkAndOpenDoor(){
+	void CheckAndOpenDoor(){
 		if(!doorIsOpen){
 			MakeDoor(DoorState.open);
 		}

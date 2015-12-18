@@ -47,6 +47,8 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\DoorManager.cs" />
      <Compile Include="Assets\Scripts\PlayerCollisions.cs" />
+     <Compile Include="Assets\Scripts\PlayerRaycast.cs" />
+     <Compile Include="Assets\Scripts\TriggerZone.cs" />
      <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Simple.shader" />
      <None Include="Assets\Standard Assets\Environment\Water (Basic)\Shaders\FXWaterBasic.shader" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
