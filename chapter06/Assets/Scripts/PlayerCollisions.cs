@@ -36,6 +36,7 @@ public class PlayerCollisions : MonoBehaviour {
 	void OnControllerColliderHit(ControllerColliderHit hit){
 		GameObject hitObj = hit.gameObject;
 		if(IsPlayerDoor(hitObj) && !doorIsOpen){
+			//print("PlayerCollisions");
 			currentDoor = hitObj;
 			MakeDoor(DoorState.open);
 		}

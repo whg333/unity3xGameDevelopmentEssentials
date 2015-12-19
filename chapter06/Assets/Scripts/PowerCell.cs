@@ -1,7 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class TriggerZone : MonoBehaviour {
+public class PowerCell : MonoBehaviour {
+
+	public float rotationSpeed = 100.0f;
 
 	// Use this for initialization
 	void Start () {
@@ -10,16 +12,13 @@ public class TriggerZone : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+		transform.Rotate(new Vector3(0, rotationSpeed * Time.deltaTime, 0));
 	}
 
 	void OnTriggerEnter(Collider col){
 		if(col.gameObject.tag == "Player"){
-			if(Inventory.IsFinishedCollect()){
-				transform.FindChild("door").SendMessage("CheckAndOpenDoor");
-			}else{
-				//warn info In Window GUI
-			}
+			col.gameObject.SendMessage("PickUpCell");
+			Destroy(gameObject);
 		}
 	}
 
