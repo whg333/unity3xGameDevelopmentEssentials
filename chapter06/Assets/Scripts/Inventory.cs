@@ -49,9 +49,13 @@ public class Inventory : MonoBehaviour {
 		meter.material.mainTexture = meterCharge[charge];
 	}
 
-	public static bool IsFinishedCollect(){
+	public static bool FinishedCollectCharge(){
 		//print(charge);
 		return charge == 4;
+	}
+
+	public static bool AtLeastOneCharge(){
+		return charge > 0 && charge < 4;
 	}
 
 	void CheckAndActivatePowerImg(){
