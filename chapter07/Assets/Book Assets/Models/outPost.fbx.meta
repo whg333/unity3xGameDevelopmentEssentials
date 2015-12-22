@@ -1,0 +1,261 @@
+fileFormatVersion: 2
+guid: 7b5b57d547ed446c795e8b86e881b006
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: dish
+    100002: door
+    100004: lamp
+    100006: //RootNode
+    100008: outpost
+    100010: table
+    100012: wood
+    100014: wood_001
+    100016: wood_002
+    400000: dish
+    400002: door
+    400004: lamp
+    400006: //RootNode
+    400008: outpost
+    400010: table
+    400012: wood
+    400014: wood_001
+    400016: wood_002
+    2300000: dish
+    2300002: door
+    2300004: lamp
+    2300006: outpost
+    2300008: table
+    2300010: wood
+    2300012: wood_001
+    2300014: wood_002
+    3300000: dish
+    3300002: door
+    3300004: lamp
+    3300006: outpost
+    3300008: table
+    3300010: wood
+    3300012: wood_001
+    3300014: wood_002
+    4300000: wood_001
+    4300002: wood
+    4300004: outpost
+    4300006: table
+    4300008: dish
+    4300010: wood_002
+    4300012: lamp
+    4300014: door
+    6400000: dish
+    6400002: door
+    6400004: lamp
+    6400006: outpost
+    6400008: table
+    6400010: wood
+    6400012: wood_001
+    6400014: wood_002
+    7400000: dooropen
+    7400002: idle
+    7400004: doorshut
+    11100000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 3
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: idle
+      takeName: Default Take
+      firstFrame: 1
+      lastFrame: 2
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: dish
+        weight: 1
+      - path: door
+        weight: 1
+      - path: lamp
+        weight: 1
+      - path: outpost
+        weight: 1
+      - path: table
+        weight: 1
+      - path: wood
+        weight: 1
+      - path: wood_001
+        weight: 1
+      - path: wood_002
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: dooropen
+      takeName: Default Take
+      firstFrame: 1
+      lastFrame: 15
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: dish
+        weight: 1
+      - path: door
+        weight: 1
+      - path: lamp
+        weight: 1
+      - path: outpost
+        weight: 1
+      - path: table
+        weight: 1
+      - path: wood
+        weight: 1
+      - path: wood_001
+        weight: 1
+      - path: wood_002
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: doorshut
+      takeName: Default Take
+      firstFrame: 16
+      lastFrame: 29
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: dish
+        weight: 1
+      - path: door
+        weight: 1
+      - path: lamp
+        weight: 1
+      - path: outpost
+        weight: 1
+      - path: table
+        weight: 1
+      - path: wood
+        weight: 1
+      - path: wood_001
+        weight: 1
+      - path: wood_002
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1.5
+    meshCompression: 0
+    addColliders: 1
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
