@@ -3,6 +3,8 @@ using System.Collections;
 
 public class TriggerZone : MonoBehaviour {
 
+	public AudioClip lockedSound;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -19,6 +21,8 @@ public class TriggerZone : MonoBehaviour {
 				transform.FindChild("door").SendMessage("CheckAndOpenDoor");
 			}else{
 				//warn info In Window GUI
+				transform.FindChild("door").GetComponent<AudioSource>().PlayOneShot(lockedSound);
+				col.gameObject.SendMessage("CheckAndActivatePowerImg");
 			}
 		}
 	}

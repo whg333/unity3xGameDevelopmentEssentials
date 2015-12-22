@@ -32,6 +32,8 @@ public class Inventory : MonoBehaviour {
 	}
 
 	void PickUpCell(){
+		CheckAndActivatePowerImg ();
+
 		//GetComponent<AudioSource>().PlayOneShot(collectSound);
 		AudioSource.PlayClipAtPoint(collectSound, transform.position);
 
@@ -45,6 +47,12 @@ public class Inventory : MonoBehaviour {
 	public static bool IsFinishedCollect(){
 		//print(charge);
 		return charge == 4;
+	}
+
+	void CheckAndActivatePowerImg(){
+		if(!powerImg.enabled){
+			powerImg.enabled = true;
+		}
 	}
 
 }
