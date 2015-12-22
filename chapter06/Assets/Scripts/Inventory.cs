@@ -12,9 +12,11 @@ public class Inventory : MonoBehaviour {
 
 	// TODO 去除掉chargeHudGUI，因为按照书上的去添加GUITexture纹理图片不显示
 	public GUITexture chargeHudGUI;
-
 	// powerImg
 	private UnityEngine.UI.RawImage powerImg;
+
+	public Texture2D[] meterCharge;
+	public Renderer meter;
 
 	// Use this for initialization
 	void Start () {
@@ -41,7 +43,10 @@ public class Inventory : MonoBehaviour {
 
 		//chargeHudGUI.texture = hudCharge[charge];
 		//print(powerImg);
+		//下面不能写成powerImg.material.mainTexture
 		powerImg.texture = hudCharge[charge];
+
+		meter.material.mainTexture = meterCharge[charge];
 	}
 
 	public static bool IsFinishedCollect(){
