@@ -16,7 +16,7 @@ public class TriggerZone : MonoBehaviour {
 		//需要了解一下引擎类的继承体系结构了，否则都是靠猜测和查API去写代码
 		GameObject canvas = GameObject.FindWithTag("Canvas");
 		//canvas..transform.FindChild ("powerImg").gameObject;
-		powerImg = canvas.GetComponentInChildren<UnityEngine.UI.RawImage>();
+		powerImg = canvas.GetComponentsInChildren<UnityEngine.UI.RawImage>()[0];
 		hintsText = canvas.GetComponentInChildren<UnityEngine.UI.Text>();
 		doorLight.color = Color.red;
 	}
