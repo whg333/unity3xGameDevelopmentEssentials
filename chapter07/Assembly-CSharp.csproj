@@ -45,11 +45,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\CoconutThrower.cs" />
      <Compile Include="Assets\Scripts\DoorManager.cs" />
      <Compile Include="Assets\Scripts\Inventory.cs" />
      <Compile Include="Assets\Scripts\PlayerCollisions.cs" />
      <Compile Include="Assets\Scripts\PlayerRaycast.cs" />
      <Compile Include="Assets\Scripts\PowerCell.cs" />
+     <Compile Include="Assets\Scripts\TargetCollision.cs" />
+     <Compile Include="Assets\Scripts\ThrowTrigger.cs" />
+     <Compile Include="Assets\Scripts\TidyObject.cs" />
      <Compile Include="Assets\Scripts\TriggerZone.cs" />
      <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Simple.shader" />
      <None Include="Assets\Standard Assets\Environment\Water (Basic)\Shaders\FXWaterBasic.shader" />

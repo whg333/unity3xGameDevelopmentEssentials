@@ -7,18 +7,19 @@ public class Inventory : MonoBehaviour {
 
 	public AudioClip collectSound;
 
-	// HUD——代表电力的纹理图片数组
+	//HUD——代表电力的纹理图片数组
 	public Texture2D[] hudCharge;
 
-	// TODO 去除掉chargeHudGUI，因为按照书上的去添加GUITexture纹理图片不显示
-	public GUITexture chargeHudGUI;
-	// powerImg
+	//去除掉chargeHudGUI，因为按照书上的去添加GUITexture纹理图片不显示
+	//public GUITexture chargeHudGUI;
+
+	//powerImg
 	private UnityEngine.UI.RawImage powerImg;
 
 	public Texture2D[] meterCharge;
 	public Renderer meter;
 
-	// Use this for initialization
+	//Use this for initialization
 	void Start () {
 		charge = 0;
 
@@ -28,7 +29,7 @@ public class Inventory : MonoBehaviour {
 		powerImg = canvas.GetComponentInChildren<UnityEngine.UI.RawImage> ();
 	}
 	
-	// Update is called once per frame
+	//Update is called once per frame
 	void Update () {
 	
 	}

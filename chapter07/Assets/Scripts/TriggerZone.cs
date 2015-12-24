@@ -42,7 +42,7 @@ public class TriggerZone : MonoBehaviour {
 				}
 			}else if(Inventory.AtLeastOneCharge()){
 				PlayLockedSound();
-				ShowHints("门还是不能打开。。。\n\n能源指示器显示能源还未足够。。。\n\n继续收集足够的能源来开启此门。。。");
+				ShowHints("门还不能打开。。。\n\n能源指示器显示能源还未足够。。。\n\n继续收集足够的能源来开启此门。。。");
 			}else{
 				PlayLockedSound();
 				ShowHints("这是一扇锁住的门。。。\n\n门旁边有个能源收集指示器。。。\n\n看来需要收集足够的能源来开启此门。。。");

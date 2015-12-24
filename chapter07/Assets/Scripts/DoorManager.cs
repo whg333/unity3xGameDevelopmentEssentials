@@ -47,8 +47,8 @@ public class DoorManager : MonoBehaviour {
 
 	void OperateDoor(bool openDoor, AudioClip doorSound, string doorAnim){
 		doorIsOpen = openDoor;
-		GetComponent<AudioSource> ().PlayOneShot (doorSound);
-		transform.parent.GetComponent<Animation> ().Play (doorAnim);
+		GetComponent<AudioSource>().PlayOneShot (doorSound);
+		transform.parent.GetComponent<Animation>().Play(doorAnim);
 	}
 
 }
