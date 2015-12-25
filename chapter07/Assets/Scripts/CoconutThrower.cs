@@ -4,19 +4,17 @@ using System.Collections;
 [RequireComponent (typeof (AudioSource))]
 public class CoconutThrower : MonoBehaviour {
 
+	public const string NAME = "coconut";
+
 	public AudioClip throwSound;
 	public Rigidbody coconutPrefab;
 	public float throwSpeed = 30.0f;
 
-	public static string NAME = "coconut";
-
 	private static bool canThrow = false;
-	private static UnityEngine.UI.RawImage crosshairImg;
 
 	// Use this for initialization
 	void Start () {
-		GameObject canvas = GameObject.FindWithTag("Canvas");
-		crosshairImg = canvas.GetComponentsInChildren<UnityEngine.UI.RawImage>()[1];
+
 	}
 
 	// Update is called once per frame
@@ -35,12 +33,12 @@ public class CoconutThrower : MonoBehaviour {
 
 	public static void CanThrow(){
 		canThrow = true;
-		crosshairImg.enabled = true;
+		UIManager.EnableCrosshairImg();
 	}
 
 	public static void CannotThrow(){
 		canThrow = false;
-		crosshairImg.enabled = false;
+		UIManager.DisableCrosshairImg();
 	}
 
 }

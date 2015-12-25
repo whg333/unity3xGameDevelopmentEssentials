@@ -16,6 +16,7 @@ public class ThrowTrigger : MonoBehaviour {
 	void OnTriggerEnter(Collider col){
 		if(CollidePlayer(col)){
 			CoconutThrower.CanThrow();
+			CoconutWin.CheckAndHints();
 		}
 	}
 

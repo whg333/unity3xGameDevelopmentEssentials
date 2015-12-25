@@ -1,13 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[RequireComponent (typeof (Rigidbody))]
 public class PowerCell : MonoBehaviour {
 
 	public float rotationSpeed = 100.0f;
 
 	// Use this for initialization
 	void Start () {
-	
+		name = "powerCell";
+		//transform.position = new Vector3 (transform.position.x, 31.5f, transform.position.z);
 	}
 	
 	// Update is called once per frame
