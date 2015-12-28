@@ -5,6 +5,7 @@ public class UIManager : MonoBehaviour {
 
 	private static UnityEngine.UI.RawImage powerImg;
 	private static UnityEngine.UI.RawImage crosshairImg;
+	private static UnityEngine.UI.RawImage matchImg;
 
 	private float hintsTimer = 0.0f;
 	private static UnityEngine.UI.Text hintsText;
@@ -14,8 +15,13 @@ public class UIManager : MonoBehaviour {
 		//需要了解一下引擎类的继承体系结构了，否则都是靠猜测和查API去写代码
 		//GameObject canvas = GameObject.FindWithTag("Canvas");
 
-		powerImg = GetComponentsInChildren<UnityEngine.UI.RawImage>()[0];
-		crosshairImg = GetComponentsInChildren<UnityEngine.UI.RawImage>()[1];
+		//RectTransform rectTransform = GetComponent<RectTransform>();
+		//print("w:"+rectTransform.rect.width+", h:"+rectTransform.rect.height);
+
+		UnityEngine.UI.RawImage[] rawImages = GetComponentsInChildren<UnityEngine.UI.RawImage>();
+		powerImg = rawImages[0];
+		crosshairImg = rawImages[1];
+		matchImg = rawImages[2];
 		hintsText = GetComponentInChildren<UnityEngine.UI.Text>();
 	}
 	
@@ -68,6 +74,14 @@ public class UIManager : MonoBehaviour {
 
 	public static void DisableCrosshairImg(){
 		crosshairImg.enabled = false;
+	}
+
+	public static void EnableMatchImg(){
+		matchImg.enabled = true;
+	}
+
+	public static void DestoryMatchImg(){
+		Destroy(matchImg);
 	}
 
 }

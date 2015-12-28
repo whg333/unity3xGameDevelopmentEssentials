@@ -49,8 +49,7 @@
      <Compile Include="Assets\Scripts\CoconutWin.cs" />
      <Compile Include="Assets\Scripts\DoorManager.cs" />
      <Compile Include="Assets\Scripts\Inventory.cs" />
-     <Compile Include="Assets\Scripts\PlayerCollisions.cs" />
-     <Compile Include="Assets\Scripts\PlayerRaycast.cs" />
+     <Compile Include="Assets\Scripts\Matches.cs" />
      <Compile Include="Assets\Scripts\PowerCell.cs" />
      <Compile Include="Assets\Scripts\TargetCollision.cs" />
      <Compile Include="Assets\Scripts\ThrowTrigger.cs" />
