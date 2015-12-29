@@ -1,15 +1,17 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\TriggerZone.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Inventory.cs">
     <Files>
-      <File FileName="Assets\Scripts\Inventory.cs" Line="15" Column="35" />
-      <File FileName="Assets\Scripts\UIManager.cs" Line="11" Column="46" />
-      <File FileName="Assets\Scripts\ThrowTrigger.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Inventory.cs" Line="21" Column="36" />
       <File FileName="Assets\Scripts\Matches.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\UIManager.cs" Line="85" Column="3" />
+      <File FileName="Assets\Scripts\ThrowTrigger.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\CoconutThrower.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\DoorManager.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\PowerCell.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\TriggerZone.cs" Line="6" Column="32" />
+      <File FileName="Assets\Scripts\TriggerZone.cs" Line="22" Column="40" />
+      <File FileName="Assets\Scripts\CoconutWin.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\TargetCollision.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
