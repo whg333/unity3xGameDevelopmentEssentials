@@ -45,6 +45,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\AliveGameObject.cs" />
      <Compile Include="Assets\Scripts\CoconutThrower.cs" />
      <Compile Include="Assets\Scripts\CoconutWin.cs" />
      <Compile Include="Assets\Scripts\DoorManager.cs" />

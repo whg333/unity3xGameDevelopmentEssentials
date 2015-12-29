@@ -27,7 +27,8 @@ public class MainMenuBtns : MonoBehaviour {
 	IEnumerator OnMouseUp(){
 		GetComponent<AudioSource>().PlayOneShot(beep);
 		yield return new WaitForSeconds(0.5f);
-		Application.LoadLevelAdditive(levelToLoad);
+		//Application.LoadLevelAdditive(levelToLoad);
+		Application.LoadLevel(levelToLoad);
 	}
 
 }
