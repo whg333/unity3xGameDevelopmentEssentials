@@ -29,7 +29,7 @@ public class MainMenuBtns : MonoBehaviour {
 
 	IEnumerator OnMouseUp(){
 		GetComponent<AudioSource>().PlayOneShot(beep);
-		yield return new WaitForSeconds(0.5f);
+		yield return new WaitForSeconds(0.35f);
 		if(isQuitBtn){
 			UnityEditor.EditorApplication.isPlaying = false; //编辑器模式下退出
 			Application.Quit();
@@ -39,6 +39,7 @@ public class MainMenuBtns : MonoBehaviour {
 			//切换场景的时候没有天空盒光线效果，这个问题慢慢寻找解决方案
 			//Application.LoadLevelAdditive(levelToLoad);
 			Application.LoadLevel(levelToLoad);
+			//Application.LoadLevelAsync(levelToLoad);
 		}
 	}
 
