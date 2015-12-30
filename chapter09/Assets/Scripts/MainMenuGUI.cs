@@ -12,6 +12,8 @@ public class MainMenuGUI : MonoBehaviour {
 	public Rect instBtn;
 
 	private Rect menuAreaNormalized;
+	private string menuPage = "main";
+	public Rect instructions;
 
 	// Use this for initialization
 	void Start () {
@@ -29,30 +31,52 @@ public class MainMenuGUI : MonoBehaviour {
 	}
 
 	void OnGUI(){
+		//print("MainMenuGUI OnGUI...");
 		GUI.skin = menuSkin;
 		GUI.BeginGroup(menuAreaNormalized);
-		if(GUI.Button(new Rect(playBtn), "Play")){
-			StartCoroutine("ButtonAction", "Island");
+
+		if(menuPage == "main"){
+			//int i = Application.loadedLevel;
+			if(GUI.Button(new Rect(playBtn), "Play"/*+i*/)){
+				StartCoroutine("ButtonAction", "Island"/*(i==0?"Menu2":"Menu")*/);
+			}
+			if(GUI.Button(new Rect(quitBtn), "Quit")){
+				StartCoroutine("ButtonAction", "quit");
+			}
+			if(GUI.Button(new Rect(instBtn), "Instructions")){
+				PlayBeepSound();
+				menuPage = "inst";
+			}
+		}else if(menuPage == "inst"){
+			GUI.Label(
+				new Rect(instructions), 
+				"你醒来后发现自己身处荒岛上。。。" +
+				"唯一逃离荒岛的方式是想方设法点燃火把冒烟发出求救新号！"
+			);
+			if(GUI.Button(new Rect(quitBtn), "Back")){
+				PlayBeepSound();
+				menuPage = "main";
+			}
 		}
-		if(GUI.Button(new Rect(quitBtn), "Quit")){
-			StartCoroutine("ButtonAction", "quit");
-		}
-		if(GUI.Button(new Rect(instBtn), "Instructions")){
-			
-		}
+
 		GUI.EndGroup();
 	}
 
 	IEnumerator ButtonAction(string levelName){
-		GetComponent<AudioSource>().PlayOneShot(beep);
+		PlayBeepSound();
 		yield return new WaitForSeconds(0.35f);
 
 		if (levelName == "quit") {
 			UnityEditor.EditorApplication.isPlaying = false; //编辑器模式下退出
 			Application.Quit();
 		} else {
-			Application.LoadLevel(levelName);
+			//Application.LoadLevel(levelName);
+			UnityEngine.SceneManagement.SceneManager.LoadScene(levelName);
 		}
+	}
+
+	void PlayBeepSound(){
+		GetComponent<AudioSource>().PlayOneShot(beep);
 	}
 
 }

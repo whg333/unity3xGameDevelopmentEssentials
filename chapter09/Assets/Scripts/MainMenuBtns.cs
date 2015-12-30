@@ -38,8 +38,10 @@ public class MainMenuBtns : MonoBehaviour {
 		}else{
 			//切换场景的时候没有天空盒光线效果，这个问题慢慢寻找解决方案
 			//Application.LoadLevelAdditive(levelToLoad);
-			Application.LoadLevel(levelToLoad);
+			//Application.LoadLevel(levelToLoad);
 			//Application.LoadLevelAsync(levelToLoad);
+
+			UnityEngine.SceneManagement.SceneManager.LoadScene(levelToLoad);
 		}
 	}
 
