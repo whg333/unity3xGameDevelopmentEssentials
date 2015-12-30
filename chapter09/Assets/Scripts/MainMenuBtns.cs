@@ -5,9 +5,12 @@ using System.Collections;
 public class MainMenuBtns : MonoBehaviour {
 
 	public string levelToLoad;
+
 	public Texture2D normalTexture;
 	public Texture2D rollOverTexture;
 	public AudioClip beep;
+
+	public bool isQuitBtn = false;
 
 	// Use this for initialization
 	void Start () {
@@ -27,8 +30,16 @@ public class MainMenuBtns : MonoBehaviour {
 	IEnumerator OnMouseUp(){
 		GetComponent<AudioSource>().PlayOneShot(beep);
 		yield return new WaitForSeconds(0.5f);
-		//Application.LoadLevelAdditive(levelToLoad);
-		Application.LoadLevel(levelToLoad);
+		if(isQuitBtn){
+			UnityEditor.EditorApplication.isPlaying = false; //编辑器模式下退出
+			Application.Quit();
+			//print("This print part works!");
+			//Debug.Log("This Debug part works!");
+		}else{
+			//切换场景的时候没有天空盒光线效果，这个问题慢慢寻找解决方案
+			//Application.LoadLevelAdditive(levelToLoad);
+			Application.LoadLevel(levelToLoad);
+		}
 	}
 
 }
