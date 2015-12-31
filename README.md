@@ -28,3 +28,13 @@
 ![ch07_1](http://cejdh.img47.wal8.com/img47/533449_20151202165458/145103196857.png)
 
 ![ch07_2](http://cejdh.img47.wal8.com/img47/533449_20151202165458/145103197009.png)
+
+## chapter08
+![ch08](http://cejdh.img47.wal8.com/img47/533449_20151202165458/14515397247.png)
+
+![cha08_1](http://cejdh.img47.wal8.com/img47/533449_20151202165458/14515397248.png)
+
+## chapter09
+![chap09](http://cejdh.img47.wal8.com/img47/533449_20151202165458/145153972488.png)
+
+![chap09_1](http://cejdh.img47.wal8.com/img47/533449_20151202165458/145153972495.png)
