@@ -4,15 +4,16 @@ using System.Collections;
 [RequireComponent (typeof (AudioSource))]
 public class CoconutWin : MonoBehaviour {
 
-	private static int targets = 0;
-	private static bool hadWon = false;
+	private static int targets;
+	private static bool hadWon;
 
 	public AudioClip winSound;
 	public Rigidbody cellPrefab;
 
 	// Use this for initialization
 	void Start () {
-		
+		targets = 0;
+		hadWon = false;
 	}
 	
 	// Update is called once per frame
