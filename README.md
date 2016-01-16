@@ -4,7 +4,7 @@
 
 ![en_v](./images/book_en.png)
 
-其中按照chapter做区分了，每个chapter作为单独的Unity项目，可使用Unity单独打开每个chapter；因为使用的[Unity](http://unity3d.com/cn/get-unity/download/archive)版本是[5.3.0](http://unity3d.com/cn/unity/whats-new/unity-5.3)，所以对于3.x版本中已经过期的API使用了5.3.0的新API做替换了（其实Unity编辑器会自动检测C#脚本，如果发现使用过时API的话，会提示是否尝试自动修复，**但不敢确保修复的正确性，最好先备份！**）
+其中按照chapter做区分了，每个chapter作为单独的Unity项目，可使用Unity单独打开每个chapter文件；因为使用的[Unity](http://unity3d.com/cn/get-unity/download/archive)版本是[5.3.0](http://unity3d.com/cn/unity/whats-new/unity-5.3)，所以对于3.x版本中已经过期的API使用了5.3.0的新API做替换了（其实Unity编辑器会自动检测C#脚本，如果发现使用过时API的话，会提示是否尝试自动修复，**但不敢确保修复的正确性，最好先备份！**）
 
 ## chapter02
 ![ch02](./images/chapter02.png)
@@ -27,7 +27,7 @@
 
 **问题：**发现添加的GUITexture根本不能显示，即在第一人称视角摄像机中不能显示
 
-**解决：**起初也没找到原因，以为是不是Unit5版本想替换掉GUITexture？然后各种尝试，在编辑器下面创建了画板（Canvas），并添加原画组件（RawImage）就可以显示了，于是乎把UI组件都使用Canvas+RawImage的方式重新组织了一下，并写了个UIManager控制显示/隐藏；但是在chapter09的时候却发现是可以显示GUITexture的，唯一不同的地方是摄像机，一个是FPSController子组件的，一个是我们自己创建的，比较了一下发现原来是**FPSController组件的摄像机Camera缺少GUILayer组件**导致不能显示GUITexture！而且需要注意的是GUITexture的位置的x和y值范围在0到1之间！
+**解决：**起初也没找到原因，以为是不是Unit5版本想替换掉GUITexture等老的GUI而转去NGUI？然后各种尝试，在编辑器下面创建了画板（Canvas），并添加原画组件（RawImage）就可以显示了，于是乎把UI组件都使用Canvas+RawImage的方式重新组织了一下，并写了个UIManager控制GUI组件的显示/隐藏；但是在chapter09的时候却发现是可以显示GUITexture的，唯一不同的地方是摄像机，一个是FPSController子组件下的，一个是我们自己创建的，比较了一下发现原来是**Unity5版本的FPSController下的摄像机Camera组件默认是缺少GUILayer的，从而导致不能显示GUITexture！**添加上GUILayer就可以了。而且需要注意的是GUITexture位置的x和y值范围必须在0到1之间！
 
 ## chapter07
 ![ch07](./images/chapter07.png)
