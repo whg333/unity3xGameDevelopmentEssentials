@@ -31,7 +31,7 @@ public class MainMenuBtns : MonoBehaviour {
 		GetComponent<AudioSource>().PlayOneShot(beep);
 		yield return new WaitForSeconds(0.35f);
 		if(isQuitBtn){
-			UnityEditor.EditorApplication.isPlaying = false; //编辑器模式下退出
+			//UnityEditor.EditorApplication.isPlaying = false; //编辑器模式下退出
 			Application.Quit();
 			//print("This print part works!");
 			//Debug.Log("This Debug part works!");

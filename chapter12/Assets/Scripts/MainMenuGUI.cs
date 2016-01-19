@@ -36,13 +36,22 @@ public class MainMenuGUI : MonoBehaviour {
 		GUI.BeginGroup(menuAreaNormalized);
 
 		if(menuPage == "main"){
-			//int i = Application.loadedLevel;
-			if(GUI.Button(new Rect(playBtn), "Play"/*+i*/)){
-				StartCoroutine("ButtonAction", "Island"/*(i==0?"Menu2":"Menu")*/);
+			if(Application.CanStreamedLevelBeLoaded ("IsLand")){
+				if (GUI.Button (new Rect(playBtn), "Play")) {
+					StartCoroutine("ButtonAction", "Island");
+				}
+			}else{
+				float percentLoaded = Application.GetStreamProgressForLevel(1) * 100;
+				GUI.Box (new Rect (playBtn), "Loading..." + percentLoaded + "% Loaded");
 			}
-			if(GUI.Button(new Rect(quitBtn), "Quit")){
-				StartCoroutine("ButtonAction", "quit");
+
+			if(Application.platform != RuntimePlatform.OSXWebPlayer
+				&& Application.platform != RuntimePlatform.WindowsWebPlayer){
+				if(GUI.Button(new Rect(quitBtn), "Quit")){
+					StartCoroutine("ButtonAction", "quit");
+				}
 			}
+
 			if(GUI.Button(new Rect(instBtn), "Instructions")){
 				PlayBeepSound();
 				menuPage = "inst";
@@ -51,7 +60,7 @@ public class MainMenuGUI : MonoBehaviour {
 			GUI.Label(
 				new Rect(instructions), 
 				"你醒来后发现自己身处荒岛上。。。" +
-				"唯一逃离荒岛的方式是想方设法点燃火把冒烟发出求救新号！"
+				"唯一逃离荒岛的方式是想方设法点燃火把冒烟发出求救信号！"
 			);
 			if(GUI.Button(new Rect(quitBtn), "Back")){
 				PlayBeepSound();
@@ -67,7 +76,7 @@ public class MainMenuGUI : MonoBehaviour {
 		yield return new WaitForSeconds(0.35f);
 
 		if (levelName == "quit") {
-			UnityEditor.EditorApplication.isPlaying = false; //编辑器模式下退出
+			//UnityEditor.EditorApplication.isPlaying = false; //编辑器模式下退出
 			Application.Quit();
 		} else {
 			//Application.LoadLevel(levelName);
