@@ -59,6 +59,10 @@
 
 ![chap10_1](./images/chapter10_1.png)
 
+![chap10_2](./images/chapter10_2.png)
+
+![chap10_3](./images/chapter10_3.png)
+
 ## chapter11
 红色标记是第一人称出生点，可隐隐约约看到从红色出生点到蓝色房屋有石头小径。
 ![chap11](./images/chapter11.png)
@@ -97,3 +101,26 @@
 ![chap11_14](./images/chapter11_14.png)
 
 ![chap11_15](./images/chapter11_15.png)
+
+## chapter12
+终于轮到发布了。。。这里由于只安装了Unity编辑器，平台支持暂未安装，所以只能先发布WebPlayer版本的，Win单击版的之后补上。照着书籍上的设置下Project Settings
+![chap12](./images/chapter12.png)
+
+点击build后选择文件夹，过一会便会生成build.html和build.unity3d文件**（注意在build的时候如果编译错误，则这2个文件都不会生成，注意查看console错误信息）**
+![chap12_1](./images/chapter12_1.png)
+
+build.html就是正常的html文件，JQuery简直是Web JS开发必备了。。。
+![chap12_2](./images/chapter12_2.png)
+
+build后可直接在本地浏览器打开该build.html
+![chap12_3](./images/chapter12_3.png)
+
+为了便于快速跑遍整个岛屿，设置FPSController的Walk Speed为10，截了跳到屋顶上的图
+![chap12_4](./images/chapter12_4.png)
+
+如果浏览器不支持则页面会提示（自己的Chrome浏览器就由于某种原因不支持，但是FireFox却可以）
+![chap12_5](./images/chapter12_5.png)
+
+**除了本地浏览器直接打开外，也可放到服务器上，这里直接把生成的build.html和build.unity3d文件放到自己的GitHub上了**，具体链接地址如下，大家可以亲自体验下：
+
+[《Unity 3.x Game Development Essentials》 example for Unity 5.3.0](http://www.iclojure.com/unity3d/build.html)
