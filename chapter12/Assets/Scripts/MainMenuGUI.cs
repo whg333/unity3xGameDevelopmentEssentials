@@ -17,6 +17,9 @@ public class MainMenuGUI : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		Cursor.lockState = CursorLockMode.None;
+		Cursor.visible = true;
+
 		menuAreaNormalized = new Rect( 
 			menuArea.x*Screen.width - (menuArea.width*0.5f),
 			menuArea.y*Screen.height - (menuArea.height*0.5f),
