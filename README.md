@@ -54,6 +54,8 @@
 
 [unity3d贴吧里也有询问的](http://tieba.baidu.com/p/4046051118)，貌似说只是在编辑器切换场景会出现该种情况，而在实际build打包出来的程序是不会有此问题，那这倒好了，最后build打包的时候再验证一下了
 
+**最终验证了！确实只是Unity编辑器的问题，真正打包后会把天空盒反射光效都考虑进去了！**
+
 ## chapter10
 ![chap10](./images/chapter10.png)
 
@@ -103,10 +105,10 @@
 ![chap11_15](./images/chapter11_15.png)
 
 ## chapter12
-终于轮到发布了。。。这里由于只安装了Unity编辑器，平台支持暂未安装，所以只能先发布WebPlayer版本的，Win单击版的之后补上。照着书籍上的设置下Project Settings
+终于轮到发布了。。。这里由于只安装了Unity编辑器，平台支持暂未安装，所以只能先发布WebPlayer版本的，Windows单机版和Android版的之后补上。照着书籍上的设置下Project Settings
 ![chap12](./images/chapter12.png)
 
-点击build按钮后选择文件夹，过一会便会生成build.html和build.unity3d文件**（注意在build的时候如果编译错误，则这2个文件都不会生成，注意查看console错误信息）**
+点击build按钮后选择文件夹，过一会便会生成build.html和build.unity3d文件，至于名称为什么是build前缀开头是因为选择了名字为build目录打包的。**（注意在build的时候如果编译错误，则这2个文件都不会生成，注意查看console错误信息）**
 
 ![chap12_1](./images/chapter12_1.png)
 
@@ -125,3 +127,30 @@ build构建打包完毕后可直接使用本地浏览器打开该build.html
 **除了本地浏览器直接打开外，也可放到服务器上，这里直接把生成的build.html和build.unity3d文件放到自己的GitHub上了**，具体链接地址如下，大家可以亲自体验下：
 
 [《Unity 3.x Game Development Essentials》 example for Unity 5.3.0](http://www.iclojure.com/unity3d/build.html)
+
+### 多平台支持
+Windows版和Android版的需要安装相应的支持，如下是下载的多平台支持的安装文件
+
+![chap12_jpg](./images/chapter12.jpg)
+
+或者直接使用Unity安装助手安装的时候选择支持的平台
+
+![chap12_6](./images/chapter12_6.png)
+
+有了多平台支持后，配置下Player Settings就可以build了，例如截图的是Windows平台64位的
+![chap12_9](./images/chapter12_9.png)
+
+Windows平台build完成后会生成exe执行文件
+
+![chap12_8](./images/chapter12_8.png)
+
+然后运行该exe文件，因为配置Player Settings时允许弹出游戏设置框，所以可看到如下设置框界面
+
+![chap12_7](./images/chapter12_7.png)
+
+然后直接点击Play按钮进入游戏，可看到Unity Logo加载界面和后续的游戏运行图了
+![chap12_10](./images/chapter12_10.png)
+
+![chap12_11](./images/chapter12_11.png)
+
+![chap12_12](./images/chapter12_12.png)
