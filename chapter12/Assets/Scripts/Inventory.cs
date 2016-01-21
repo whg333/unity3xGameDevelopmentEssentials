@@ -60,7 +60,6 @@ public class Inventory : MonoBehaviour {
 	void PickUpMatch(){
 		hadMatch = true;
 		AudioSource.PlayClipAtPoint(collectSound, transform.position);
-		GUIManager.DestoryPowerImg();
 		GUIManager.EnableMatchImg();
 	}
 

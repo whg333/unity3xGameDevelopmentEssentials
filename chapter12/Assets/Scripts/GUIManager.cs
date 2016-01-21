@@ -70,10 +70,6 @@ public class GUIManager : MonoBehaviour {
 		crosshairImg.enabled = false;
 	}
 
-	public static void DestoryPowerImg(){
-		Destroy(powerImg);
-	}
-
 	public static void EnableMatchImg(){
 		matchImg.enabled = true;
 	}
