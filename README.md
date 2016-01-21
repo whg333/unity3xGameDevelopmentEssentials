@@ -1,4 +1,9 @@
 # unity3xGameDevelopmentEssentials
+
+****
+已经使用Unity5.3.0发布了WebPlayer版本的游戏！**[亲自体验游戏请点击这里！]((http://www.iclojure.com/unity3d/build.html))**
+****
+
 本项目是书籍[《Unity 3.x游戏开发经典教程》](http://book.douban.com/subject/22925700/)（英文版[《Unity 3.x Game Development Essentials》](http://www.amazon.com/Unity-3-x-Game-Development-Essentials/dp/1849691444/ref=sr_1_1?ie=UTF8&qid=1450686270&sr=8-1&keywords=Unity+3.x+Game+Development+Essentials)）的例子。
 ![ch_v](./images/book_ch.jpg)
 
@@ -27,7 +32,9 @@
 
 **问题：**发现添加的GUITexture根本不能显示，即在第一人称视角摄像机中不能显示
 
-**解决：**起初也没找到原因，以为是不是Unit5版本想替换掉GUITexture等老的GUI而转去NGUI？然后各种尝试，在编辑器下面创建了画板（Canvas），并添加原画组件（RawImage）就可以显示了，于是乎把UI组件都使用Canvas+RawImage的方式重新组织了一下，并写了个UIManager控制GUI组件的显示/隐藏；但是在chapter09的时候却发现是可以显示GUITexture的，唯一不同的地方是摄像机，一个是FPSController子组件下的，一个是我们自己创建的，比较了一下发现原来是**Unity5版本的FPSController下的摄像机Camera组件默认是缺少GUILayer的，从而导致不能显示GUITexture！**添加上GUILayer就可以了。而且需要注意的是GUITexture位置的x和y值范围必须在0到1之间！
+**解决：**起初也没找到原因，以为是不是Unit5版本想替换掉GUITexture等老的GUI而转去NGUI？然后各种尝试，在编辑器下面创建了画板（Canvas），并添加原画组件（RawImage）就可以显示了，于是乎把UI组件都使用Canvas+RawImage的方式重新组织了一下，并写了个UIManager控制GUI组件的显示/隐藏；但是在chapter09的时候却发现是可以显示GUITexture的，唯一不同的地方是摄像机，一个是FPSController子组件下的，一个是我们自己创建的，比较了一下发现原来是**Unity5版本的FPSController下的摄像机Camera组件默认是缺少GUILayer的，从而导致不能显示GUITexture！**添加上GUILayer就可以了。
+
+（PS：**GUITexture位置的x和y值范围必须在0到1之间！且必须在Game面板才能看到，在Scene面板是看不到的**）
 
 ## chapter07
 ![ch07](./images/chapter07.png)
@@ -115,7 +122,9 @@
 build.html就是正常的html文件，JQuery简直是Web JS开发必备了。。。
 ![chap12_2](./images/chapter12_2.png)
 
-build构建打包完毕后可直接使用本地浏览器打开该build.html
+build构建打包完毕后可直接使用本地浏览器打开build.html
+![chap12_16](./images/chapter12_16.png)
+
 ![chap12_3](./images/chapter12_3.png)
 
 为了便于快速跑遍整个岛屿，设置**FPSController的Walk Speed为10**，截了跳到屋顶上的图
@@ -154,3 +163,17 @@ Windows平台build完成后会生成exe执行文件
 ![chap12_11](./images/chapter12_11.png)
 
 ![chap12_12](./images/chapter12_12.png)
+
+### 更新
+在chapter06提到过遇到GUITexture不能显示的问题是由于Camera下没有GUILayer，为此特意写了个UIManager控制GUI组件的显示/隐藏，UIManager是使用基于Canvas+RawImage的方式，但多平台build打包后发现UI组件不能自适应屏幕，但是GUITexture因为是基于屏幕百分比设置的（这也是为什么填写的GUITexture位置必须在0到1之间），所以再次写了个GUIManager使用GUITexture替换掉基于Canvas+RawImage方式的UIManager
+
+![chap12_14](./images/chapter12_14.png)
+
+![chap12_15](./images/chapter12_15.png)
+
+最后创建了一个GUIManager的对象应用GUImanager.cs脚本，然后把Canvas删除掉，UI组件自适应屏幕就搞定了！
+![chap12_13](./images/chapter12_13.png)
+
+## ToDoList
+1. 点燃火把赢得游戏后有了淡出到菜单界面，现在可以写一个点击Play按钮后从菜单界面淡入到小岛场景的动画，这也是书籍chapter10留给我们的挑战
+2. Unity5.3.0版本的天空就是一个默认的淡蓝色，啥都没有，之前费好大劲在网上寻找天空盒资源，才找到了现在的卡通版天空盒。。。但同时也找到了不少各种系列的天空盒，甚至有末日画风的天空盒！**第一人称——末日——僵尸**，正好结合起来做一个具有**末日僵尸风格的“逃离小岛”游戏**，这看起来是个不错的计划！！！可以从chapter12开个分支去实施这个计划！
