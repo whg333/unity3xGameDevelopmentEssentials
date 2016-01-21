@@ -51,6 +51,7 @@
      <Compile Include="Assets\Scripts\CoconutWin.cs" />
      <Compile Include="Assets\Scripts\DoorManager.cs" />
      <Compile Include="Assets\Scripts\Fader.cs" />
+     <Compile Include="Assets\Scripts\GUIManager.cs" />
      <Compile Include="Assets\Scripts\Inventory.cs" />
      <Compile Include="Assets\Scripts\MainMenuBtns.cs" />
      <Compile Include="Assets\Scripts\MainMenuGUI.cs" />

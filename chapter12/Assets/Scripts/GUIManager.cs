@@ -1,29 +1,22 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class UIManager : MonoBehaviour {
+public class GUIManager : MonoBehaviour {
 
-	/*
-	private static UnityEngine.UI.RawImage powerImg;
-	private static UnityEngine.UI.RawImage crosshairImg;
-	private static UnityEngine.UI.RawImage matchImg;
+	private static GUITexture powerImg;
+	private static GUITexture crosshairImg;
+	private static GUITexture matchImg;
 
 	private float hintsTimer = 0.0f;
-	private static UnityEngine.UI.Text hintsText;
+	private static GUIText hintsText;
 
 	// Use this for initialization
 	void Start () {
-		//需要了解一下引擎类的继承体系结构了，否则都是靠猜测和查API去写代码
-		//GameObject canvas = GameObject.FindWithTag("Canvas");
-
-		//RectTransform rectTransform = GetComponent<RectTransform>();
-		//print("w:"+rectTransform.rect.width+", h:"+rectTransform.rect.height);
-
-		UnityEngine.UI.RawImage[] rawImages = GetComponentsInChildren<UnityEngine.UI.RawImage>();
-		powerImg = rawImages[0];
-		crosshairImg = rawImages[1];
-		matchImg = rawImages[2];
-		hintsText = GetComponentInChildren<UnityEngine.UI.Text>();
+		GUITexture[] hudGUIs = GetComponentsInChildren<GUITexture>();
+		powerImg = hudGUIs[0];
+		crosshairImg = hudGUIs[1];
+		matchImg = hudGUIs[2];
+		hintsText = GetComponentInChildren<GUIText>();
 	}
 	
 	// Update is called once per frame
@@ -77,6 +70,10 @@ public class UIManager : MonoBehaviour {
 		crosshairImg.enabled = false;
 	}
 
+	public static void DestoryPowerImg(){
+		Destroy(powerImg);
+	}
+
 	public static void EnableMatchImg(){
 		matchImg.enabled = true;
 	}
@@ -84,6 +81,5 @@ public class UIManager : MonoBehaviour {
 	public static void DestoryMatchImg(){
 		Destroy(matchImg);
 	}
-	*/
-
 }
+
