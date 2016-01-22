@@ -165,6 +165,8 @@ Windows平台build完成后会生成exe执行文件
 ![chap12_12](./images/chapter12_12.png)
 
 ### 更新
+**自适应UI组件**
+
 在chapter06提到过遇到GUITexture不能显示的问题是由于Camera下没有GUILayer，为此特意写了个UIManager控制GUI组件的显示/隐藏，UIManager是使用基于Canvas+RawImage的方式，但多平台build打包后发现UI组件不能自适应屏幕，但是GUITexture因为是基于屏幕百分比设置的（这也是为什么填写的GUITexture位置必须在0到1之间），所以再次写了个GUIManager使用GUITexture替换掉基于Canvas+RawImage方式的UIManager
 
 ![chap12_14](./images/chapter12_14.png)
@@ -173,6 +175,22 @@ Windows平台build完成后会生成exe执行文件
 
 最后创建了一个GUIManager的对象应用GUImanager.cs脚本，然后把Canvas删除掉，UI组件自适应屏幕就搞定了！
 ![chap12_13](./images/chapter12_13.png)
+
+**去掉MySun直线光**
+
+环境一直存在2个直线光，一个是最初场景默认的，另一个是自建的MySun，但发现2个直线光在一起令整个小岛反射特别强烈，如下图
+![chap12_20](./images/chapter12_20.png)
+
+于是乎把自己的MySun去掉吧，光晕也应用在最初的直线光上，下面2幅图可见对比出来了，去掉MySun后反射光效就没那么强烈了
+![chap12_18](./images/chapter12_18.png)
+
+![chap12_19](./images/chapter12_19.png)
+
+最终发布游戏后反射光效就没那么强烈了
+![chap12_17](./images/chapter12_17.png)
+
+然后按钮改为中文的
+![chap12_21](./images/chapter12_21.png)
 
 ## ToDoList
 1. 点燃火把赢得游戏后有了淡出到菜单界面，现在可以写一个点击Play按钮后从菜单界面淡入到小岛场景的动画，这也是书籍chapter10留给我们的挑战
