@@ -40,7 +40,7 @@ public class MainMenuGUI : MonoBehaviour {
 
 		if(menuPage == "main"){
 			if(Application.CanStreamedLevelBeLoaded ("IsLand")){
-				if (GUI.Button (new Rect(playBtn), "Play")) {
+				if (GUI.Button (new Rect(playBtn), "开始")) {
 					StartCoroutine("ButtonAction", "Island");
 				}
 			}else{
@@ -50,12 +50,12 @@ public class MainMenuGUI : MonoBehaviour {
 
 			if(Application.platform != RuntimePlatform.OSXWebPlayer
 				&& Application.platform != RuntimePlatform.WindowsWebPlayer){
-				if(GUI.Button(new Rect(quitBtn), "Quit")){
+				if(GUI.Button(new Rect(quitBtn), "退出")){
 					StartCoroutine("ButtonAction", "quit");
 				}
 			}
 
-			if(GUI.Button(new Rect(instBtn), "Instructions")){
+			if(GUI.Button(new Rect(instBtn), "游戏说明")){
 				PlayBeepSound();
 				menuPage = "inst";
 			}
@@ -65,7 +65,7 @@ public class MainMenuGUI : MonoBehaviour {
 				"你醒来后发现自己身处荒岛上。。。" +
 				"唯一逃离荒岛的方式是想方设法点燃火把冒烟发出求救信号！"
 			);
-			if(GUI.Button(new Rect(quitBtn), "Back")){
+			if(GUI.Button(new Rect(quitBtn), "返回")){
 				PlayBeepSound();
 				menuPage = "main";
 			}
