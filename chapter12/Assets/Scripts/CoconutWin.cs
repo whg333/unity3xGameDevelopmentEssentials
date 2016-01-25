@@ -49,7 +49,7 @@ public class CoconutWin : MonoBehaviour {
 
 	public static void CheckAndHints(){
 		if(!hadWon){
-			GUIManager.ShowHints("\n\n\n\n\n\n\n\n\n\n\n赢得射击靶心游戏将会获得1个能源\n\n当3个靶都处于被射倒下状态时才算赢");
+			GUIManager.ShowHints("\n\n\n\n\n\n\n\n赢得射击靶心游戏将会获得1个能源\n\n当3个靶都处于被射倒下状态时才算赢");
 		}
 	}
 

@@ -50,6 +50,7 @@
      <Compile Include="Assets\Scripts\CoconutThrower.cs" />
      <Compile Include="Assets\Scripts\CoconutWin.cs" />
      <Compile Include="Assets\Scripts\DoorManager.cs" />
+     <Compile Include="Assets\Scripts\FadeWhite.cs" />
      <Compile Include="Assets\Scripts\Fader.cs" />
      <Compile Include="Assets\Scripts\GUIManager.cs" />
      <Compile Include="Assets\Scripts\Inventory.cs" />
@@ -58,6 +59,7 @@
      <Compile Include="Assets\Scripts\Matches.cs" />
      <Compile Include="Assets\Scripts\PowerCell.cs" />
      <Compile Include="Assets\Scripts\Reloader.cs" />
+     <Compile Include="Assets\Scripts\StartGame.cs" />
      <Compile Include="Assets\Scripts\TargetCollision.cs" />
      <Compile Include="Assets\Scripts\ThrowTrigger.cs" />
      <Compile Include="Assets\Scripts\TidyObject.cs" />
