@@ -1,6 +1,6 @@
 # unity3xGameDevelopmentEssentials
 
-已经使用Unity5.3.0发布了WebPlayer版本的游戏！ **[亲自体验游戏请点击这里！](http://www.iclojure.com/unity3d/build.html)**
+已经使用Unity5.3.0发布了WebPlayer版本的游戏！ **[亲自体验游戏请点击这里！](http://www.iclojure.com/unity3d/build.html)**需要安装Unity的WebPlayer浏览器插件
 
 ****
 
@@ -207,3 +207,17 @@ ToDoList的第1个任务淡入小岛场景
 ![chap12_25](./images/chapter12_25.png)
 
 ### 紧接着的就是——具有末日僵尸风格的“逃离小岛”游戏，开个分支处理！
+
+## survivalIsland
+变换下天空盒，选择了一个较灰暗的场景，然后调整下日晕，这算是日落还是日出呢？就把这个作为末日僵尸风格的“逃离小岛”的游戏雏形！
+![chap12_26](./images/chapter12_26.png)
+
+![chap12_27](./images/chapter12_27.png)
+
+![chap12_28](./images/chapter12_28.png)
+
+![chap12_29](./images/chapter12_29.png)
+
+![chap12_30](./images/chapter12_30.png)
+
+然后以此游戏雏形再新开GitHub项目开发。GitHub项目地址为[survivalIsland](https://github.com/whg333/survivalIsland)
